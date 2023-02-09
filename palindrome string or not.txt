@@ -1,0 +1,37 @@
+#include <stdio.h>
+void palindrome(char *p,int a)
+{
+    int i,j,flag=0;
+    for(i=0,j=a-1;i<=a/2,j>=a/2;i++,j--)
+    {
+        if((*p)+i==(*p)+j)
+        flag=1;
+        else
+        flag=0;
+    }
+    if (flag==1)
+    printf("Palindrome\n");
+    else
+    printf("Not Palindrome\n");
+
+}
+int main()
+{
+    
+    int i,n,j,flag=0;
+    char *q;
+   // q=(int*)malloc(sizeof(char));
+    printf("Enter the size of our string");
+    scanf("%d",&n);
+    char s[n];
+    printf("Type your string now :");
+    
+    scanf("%s",s);
+    
+    printf("Your given string is %s\n",s);
+    q=&s;
+    palindrome(q,n);
+    
+    return 0;
+}
+

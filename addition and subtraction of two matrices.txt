@@ -1,0 +1,65 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,i,j,m;
+    printf("Enter the number of rows :");
+    scanf("%d",&n);
+    printf("Enter the number of columns :");
+    scanf("%d",&m);
+    int a[n][m],b[n][m];
+    printf("Start inserting values in your first array :");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            printf("%5d",a[i][j]);
+        }
+        printf("\n");
+    }
+    printf("Start inserting values in your second array : ");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            scanf("%d",&b[i][j]);
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            printf("%5d",b[i][j]);
+        }
+        printf("\n");
+    }
+    printf("Your subtraction of matrices : \n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            printf("%5d",a[i][j]-b[i][j]);
+        }
+        printf("\n");
+    }
+    printf("Your subtraction of matrices : \n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            printf("%5d",a[i][j]+b[i][j]);
+        }
+        printf("\n");
+    }
+    
+
+    return 0;
+}
+

@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+     int a,n,i=1,f=0;
+    printf("enter how many numbers you want to enter");
+    scanf("%d",&a);
+    while(a>0)
+    {
+        scanf("%d",&n);
+        for(int i=1;i<=n;i++)
+        {
+           if(n==i*i)
+          {
+              f=1;
+              break;
+          }
+        }
+        if(f==1)
+        printf("perfect square");
+        else
+        printf("Not a perfect square");
+        
+        a--;
+    }
+
+    return 0;
+}
+

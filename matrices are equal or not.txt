@@ -1,0 +1,78 @@
+#include <stdio.h>
+
+int main()
+{
+     int n,i,j,m,flag=0,y,z,c,k;
+    printf("Enter the number of rows for first array :");
+    scanf("%d",&n);
+    printf("Enter the number of columns for first array :");
+    scanf("%d",&m);
+    int a[n][m];
+    printf("Enter the number of rows for second array :");
+    scanf("%d",&c);
+    printf("Enter the number of columns for second array :");
+    scanf("%d",&k);
+    int b[c][k];
+    if(n==c && m==k)
+    {
+        printf("Start inserting values in your first array :");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            printf("%5d",a[i][j]);
+        }
+        printf("\n");
+    }
+    printf("Start inserting values in your second array : ");
+    for(i=0;i<c;i++)
+    {
+        for(j=0;j<k;j++)
+        {
+            scanf("%d",&b[i][j]);
+        }
+    }
+    for(i=0;i<c;i++)
+    {
+        for(j=0;j<k;j++)
+        {
+            printf("%5d",b[i][j]);
+        }
+        printf("\n");
+    }
+    
+    for(i=0,y=0;i<n,y<c;i++,y++)
+    {
+        for(j=0,z=0;j<m,z<k;j++,z++)
+        {
+            if(a[i][j]==b[y][z])
+            {
+                flag++;
+            }
+        }
+        
+    }
+    if(flag==(n*m))
+    {
+        printf("Matrices are equal");
+    }
+    else
+    printf("Matrices are not equal");
+    
+
+        
+    }
+    else
+    printf("\n  Matrices are not equal");
+    
+
+    return 0;
+}
+

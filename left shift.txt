@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,i,z,temp;
+    printf("Enter the size of your array.....");
+    scanf("%d",&n);
+    printf("Enter The Number Of Digits You Want To Left Shift  :");
+    scanf("%d",&z);
+   
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    while(z>0)
+    {
+       temp=a[0];
+       for(i=0;i<n-1;i++)
+       {
+           a[i]=a[i+1];
+       }
+       a[n-1]=temp;
+       z--;
+    }
+    printf("Left Shifted Array Is.......");
+    for(i=0;i<n;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    
+    
+    
+    
+    
+
+    return 0;
+}
+

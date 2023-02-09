@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    printf("Input your number :");
+    scanf("%d",&a);
+    if(a&1)
+    printf("Least signficant bit of %d is 1",a);
+    else
+    printf("Least significat bit of %d is 0",a);
+
+    return 0;
+}
+
